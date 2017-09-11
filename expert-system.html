@@ -69,11 +69,122 @@
                     </ul>
                 </nav>
             </div>
+
+
+            <div class="modal inmodal" id="formModal" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content animated bounceInRight">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Edit Fault</h4>
+                            <small class="font-bold">You can edit the fault and resend to FRSServer.</small>
+                        </div>
+                        <form method="POST" action="/expert/reportFault/" class="form-horizontal">
+                            <div class="modal-body">
+
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultID">Fault ID *</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultID" id="FaultID">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultEffect">Fault Effect</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultEffect" id="FaultEffect">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultLocation">Fault Location</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultLocation" id="FaultLocation">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultMessage">Fault Message</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultMessage" id="FaultMessage">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultName">Fault Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultName" id="FaultName">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultNo">Fault No</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultNo" id="FaultNo">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultParameter">Fault Parameter</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultParameter" id="FaultParameter">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="FaultValue">Fault Value</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="FaultValue" id="FaultValue">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="CheckStatus">Check Status</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="CheckStatus" id="CheckStatus">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="SymptomID">Symptom ID</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="SymptomID" id="SymptomID">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="SymptomDesc">Symptom Desc</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="SymptomDesc" id="SymptomDesc">
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="AvailableFunctions">Available Functions</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" name="AvailableFunctions" id="AvailableFunctions" rows="5"></textarea>
+                                    </div>
+                                </div>
+                                <!-- Name -->
+                                <div class="form-group">
+                                    <label class="control-label col-md-3" for="ReconfCommand">Reconfiguration Command</label>
+                                    <div class="col-md-9">
+                                        <textarea class="form-control" name="ReconfCommand" id="ReconfCommand" rows="7"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Edit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="wrapper wrapper-content animated fadeInRight">
-
-
-
-
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="ibox float-e-margins">
@@ -102,10 +213,10 @@
                                                 <th>Fault No</th>
                                                 <th>Fault Parameter</th>
                                                 <th>Fault Value</th>
-                                                <th>Chech Status</th>
+                                                <th>Check Status</th>
                                                 <th>Symptom ID</th>
                                                 <th>Symptom Desc</th>
-                                                <th>Avaiable Functions</th>
+                                                <th>Available Functions</th>
                                                 <th>Reconfiguration Command</th>
                                                 <th>Occured At</th>
                                                 <th>Manipulation</th>
@@ -121,44 +232,15 @@
                                                 <th>Fault No</th>
                                                 <th>Fault Parameter</th>
                                                 <th>Fault Value</th>
-                                                <th>Chech Status</th>
+                                                <th>Check Status</th>
                                                 <th>Symptom ID</th>
                                                 <th>Symptom Desc</th>
-                                                <th>Avaiable Functions</th>
+                                                <th>Available Functions</th>
                                                 <th>Reconfiguration Command</th>
                                                 <th>Occured At</th>
                                                 <th>Manipulation</th>
                                             </tr>
                                         </tfoot>
-                                        <!-- <tbody>
-                                            <tr>
-                                                <td>
-                                                    <%= Fault.fault_id %>
-                                                </td>
-                                                <td>
-                                                    <%= Fault.component_id %>
-                                                </td>
-                                                <td>
-                                                    <%= Fault.series %>
-                                                </td>
-                                                <td>
-                                                    <%= Fault.fault_type %>
-                                                </td>
-                                                <td>
-                                                    <%= Fault.fault_description %>
-                                                </td>
-                                                <td>
-                                                    <%= Fault.insert_at %>
-                                                </td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <a class="btn btn-default btn-sm" href="#" id="getStudent" data-toggle="tooltip" data-placement="top" title="check"><i class="fa fa-search"></i></a>
-                                                        <a class="btn btn-default btn-sm" href="#" id="editStudent" data-toggle="tooltip" data-placement="top" title="edit"><i class="fa fa-pencil"></i></a>
-                                                        <a class="btn btn-danger btn-sm" href="#" data-toggle="tooltip" data-placement="top" title="remove"><i class="fa fa-trash"></i></a>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody> -->
                                     </table>
                                 </div>
                             </div>
@@ -194,8 +276,10 @@
     <script src="partner-assets/js/plugins/blueimp/jquery.blueimp-gallery.min.js"></script>
     <script>
         $(document).ready(() => {
+            var _faultData = [];
             $.get("http://localhost:8084/FRS/expert/getFaults", function (faultData, status) {
                 var dataSet = [];
+                _faultData = faultData;
                 faultData.forEach((_data, index) => {
                     var __data = [];
                     __data.push(_data.fault_id);
@@ -209,8 +293,8 @@
                     __data.push(_data.check_status);
                     __data.push(_data.symptom_id);
                     __data.push(_data.symptom_desc);
-                    __data.push(_data.available_functions);
-                    __data.push(_data.reconf_command);
+                    __data.push(_data.available_functions.substring(0,50) + "...");
+                    __data.push(_data.reconf_command.substring(0,50) + "...");
                     __data.push(_data.occured_at);
                     __data.push("");
                     dataSet.push(__data);
@@ -221,7 +305,7 @@
                         "aTargets": [14],
                         "mData": "Manipulation",
                         "mRender": function (data, type, full, row) {
-                            return '<a class="btn btn-default btn-sm" href="#" data-row=' + row + ' id="editStudent" data-toggle="tooltip" data-placement="top" title="edit"><i class="fa fa-pencil"></i></a><a class="btn btn-danger btn-sm" href="#" data-toggle="tooltip" data-placement="top" title="remove"><i class="fa fa-trash"></i></a>';
+                            return '<a class="btn btn-default" data-toggle="modal" data-target="#formModal" href="#" data-row="' + row.row + '" id="editStudent" title="edit"><i class="fa fa-pencil"></i></a><a class="btn btn-danger" href="#" data-toggle="tooltip" data-placement="top" title="remove"><i class="fa fa-trash"></i></a>';
                         }
                     }]
                 });
@@ -229,6 +313,25 @@
             $('#fault_table').on('#editStudent', 'click', (event) => {
                 alert($(this).attr('data-row'));
             });
+            $('#formModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget);
+                var row = button.data('row');
+                var modal = $(this);
+                var __faultData = _faultData[row];
+                modal.find("#FaultID").val(__faultData.fault_id);
+                modal.find("#FaultEffect").val(__faultData.fault_effect);
+                modal.find("#FaultLocation").val(__faultData.fault_location);
+                modal.find("#FaultMessage").val(__faultData.fault_message);
+                modal.find("#FaultName").val(__faultData.fault_name);
+                modal.find("#FaultNo").val(__faultData.fault_no);
+                modal.find("#FaultParameter").val(__faultData.fault_parameter);
+                modal.find("#FaultValue").val(__faultData.fault_value);
+                modal.find("#CheckStatus").val(__faultData.check_status);
+                modal.find("#SymptomID").val(__faultData.symptom_id);
+                modal.find("#SymptomDesc").val(__faultData.symptom_desc);
+                modal.find("#AvailableFunctions").val(__faultData.available_functions);
+                modal.find("#ReconfCommand").val(__faultData.reconf_command);
+            })
         });
     </script>
 </body>
